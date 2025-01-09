@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Great Vibes', cursive;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 6rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .caption {
+    font-size: 2rem;
+    margin: 10px 0;
+    animation: fadeIn 3s ease-in-out;
+  }
+  
+  #proposalBtn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 10;
+  }
+  
+  #proposalBtn:hover {
+    background: #ff3b2f;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+  }
+  
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .popup-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .popup-content .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .popup-content button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  #yesBtn {
+    background: #4caf50;
+    color: #fff;
+  }
+  
+  #noBtn {
+    background: #f44336;
+    color: #fff;
+  }
+  
+  /* Floating Hearts */
+  .hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .heart {
+    position: absolute;
+    background: #ff6f61;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ff6f61;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: -10px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) rotate(45deg); }
+    50% { transform: translateY(-20px) rotate(45deg); }
+    100% { transform: translateY(0) rotate(45deg); }
+  }

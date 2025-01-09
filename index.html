@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./Styles/styles.css">
-    <script src="./script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Lora&display=swap" rel="stylesheet">
-    <style>
-        /* Add your existing styles here */
-
-        /* Additional style for the note */
-        .made-with-love {
-            position: fixed;
-            bottom: 10px; /* Adjust this value to move it closer to the bottom */
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            color: #777;
-        }
-
-        .github-link {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayushi, Will You Be Mine?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+    })();
+  </script>
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1 class="header_text">Ayushi</h1>
-            <h1 class="subheader">My amazing Maasum Ladki</h1>
-            <h1 class="proposal-text"> You bring so much joy and light into my life. You are the kind of charm that makes everything seem possible, and I don’t want to miss out on that.</h1>
-        </div>
-        <div class="gif_container">
-            <img src="https://64.media.tumblr.com/44437aaa3af65ef5b5dc25b2cf1e81d1/6acc7d78ea83e207-45/s400x600/5b30035952803850ed3136fbe760ceff97ee8d19.gif" alt="Cute animated illustration">
-        </div>
-        <div class="buttons">
-            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
-        </div>
+  <div class="container">
+    <h1 class="title">Ayushi</h1>
+    <p class="caption">You are my favorite and the one I care about the most.</p>
+    <button id="proposalBtn">Will You Be Mine?</button>
+  </div>
 
-        <!-- Positioned closer to the bottom with GitHub link -->
-        <p class="made-with-love">
-            Made with love and a sprinkle of creativity by Maasum aadmi 💖✨. 
-        </p>
+  <!-- Proposal Popup -->
+  <div id="proposalPopup" class="popup">
+    <div class="popup-content">
+        <button id="proposalBtn">Will You Be Mine?</button>
+      <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+      </div>
     </div>
+  </div>
+
+  <!-- Confirmation Message -->
+  <div id="confirmationMessage" class="popup">
+    <div class="popup-content">
+      <h2>Thank you, Ayushi! 💖</h2>
+      <p>You've made me the happiest person alive!</p>
+    </div>
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="hearts">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
